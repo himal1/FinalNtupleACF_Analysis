@@ -1,0 +1,4 @@
+#!/bin/bash
+set -x
+g++ -O2 -pipe -Wall -W -Woverloaded-virtual -fPIC -Iinclude `root-config --cflags` -o $1.o -c $1.C
+g++ -O2 $1.o `root-config --glibs` -o $1.exe
